@@ -383,6 +383,7 @@ height: 24px;
     
   }
   .left-section{
+    position: relative;
     margin-left: 200px;
     display: flex;
     flex-direction: column;
@@ -899,6 +900,7 @@ height: 24px;
   gap: 60px;
  }
  .left-section{
+  position: relative;
   margin-left: 8%;
   width: 50%;
  }
@@ -906,6 +908,11 @@ height: 24px;
   width: 565px;
   height: 680px;
   aspect-ratio: 565/680;
+  z-index: 1;
+ }
+ .play-button{
+  position: absolute;
+  z-index: 2;
  }
  .music-content{
   margin-left: 100px;
@@ -967,7 +974,9 @@ height: 24px;
  .sports-quote{
   margin-top: 0;
  }
-
+.left-section .circles{
+  margin-top: -1%;
+}
 .leadership{
   margin-top: 40px;
   margin-bottom: 40px;
