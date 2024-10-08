@@ -622,7 +622,7 @@ const Portfolio = () => {
        </div>
        <dev className="nav-container" style={{ marginLeft: "60px"}}>
           <nav className="navigation">
-            <ul style={{gap: 80, border: "none"}}>
+            <ul style={{gap: 40, border: "none"}}>
             <li><Link className="link" to="home" smooth={true} duration={500}>Home</Link></li>
               <li><Link className="link" to="about" smooth={true} duration={500}>About</Link></li>
               <li><Link className="link" to="passion" smooth={true} duration={500}>Passion</Link></li>
@@ -631,7 +631,7 @@ const Portfolio = () => {
             </ul>
           </nav>
 
-          <div className="social-icons-footer" style={{marginLeft: "80px", gap: 15}}>
+          <div className="social-icons-footer" style={{gap: 15}}>
             <a
               href="https://www.facebook.com"
               target="_blank"
