@@ -355,7 +355,7 @@ height: 24px;
     padding-bottom: 7px;
   }
   .line-divider{
-    width: 100%;
+    width: 80%;
     margin-left: 150px;
     margin-bottom: 80px;
     margin-top: 60px;
@@ -803,7 +803,7 @@ height: 24px;
     margin-left: -90px;
   }
   .intro-image{
-    height: 700px;
+    height: 84vh;
     margin-top: 60px;
     margin-left: -10px;
   }
@@ -1024,7 +1024,7 @@ height: 24px;
  }
 
  .resume {
-  height: 40vh;
+  height: 50vh;
  }
 
  .resume-icon{

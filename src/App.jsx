@@ -455,7 +455,7 @@ const Portfolio = () => {
             </video>
             {!isPlaying && (
                 <button className="play-button" onClick={handlePlayPause}>
-                    {/* <img src='./assets/Group_28.svg' alt="Play Button" className="play-icon" /> */}
+                    <img src='./assets/Group_28.svg' alt="Play Button" className="play-icon" />
                 </button>
             )}
             <div className="circles">
