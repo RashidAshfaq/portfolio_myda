@@ -302,7 +302,7 @@ height: 24px;
     
   }
   .right-section{
-    margin-left: 10%;
+    margin-left: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -758,68 +758,6 @@ height: 24px;
     color: inherit;
   }
   
-  /* Hamburger Icon Styles */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-right: 20px;
-}
-
-.bar {
-  height: 3px;
-  width: 30px;
-  background-color: black;
-  margin: 4px;
-  transition: all 0.3s ease;
-}
-
-.span {
-  font-size: 100px;
-  color: rgb(244, 166, 160);
-  font-weight: 700;
-}
-@media (min-width: 1920px) {
-  /* .intro{
-    height: 90vh;
-  } */
-   /* .right-section{
-    margin-left: 4%;
-   } */
-  
-}
-@media (max-width: 1980px){
-  /* Your styles for screens wider than 1920px */
-  .intro{
-    height: 94vh;
-  }
-  .community .right-section,   .leadership .right-section{
-    margin-left: 5%;
-  }
-  .left-section{
-    margin-left: 7%;
-  }
-  .certificates-content{
-    margin-left: 0%;
-  }
-  .arrows{
-    justify-content: center;
-    margin-left: 0%;
-  }
-  .resume-icon{
-    margin-left: 5%;
-  }
-  .social-icons-footer{
-    margin-left: 10%;
-  }
-  .crocheting-content{
-    margin-left: 6%;
-    margin-right: 4%;
-  }
-  .intro-content{
-    margin-left: 4%;
-  }
-}
 @media (max-width: 1440px ) {
   body, html {
     margin: 0;
@@ -1077,7 +1015,7 @@ height: 24px;
  }
 
  .certificates{
-  height: 88vh;
+  height: 100vh;
   margin-top: 120px;
   padding-top: 6%;
  }
@@ -1136,123 +1074,67 @@ height: 24px;
   
 }
 /* Responsive Design */
-@media (max-width: 1280px) {
-  body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    overflow-x: hidden;
-  }
+@media (max-width: 1024px) {
   .portfolio-header {
-      flex-direction: row;
-      padding: 15px;
-  }
-
-  .name {
-      font-size: 35px;
-  }
-
-  /* Hide the normal menu on small screens */
-  .navigation {
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 70px;
-    right: 40px;
-    background-color: white;
-    width: 200px;
-    /* border: 1px solid #ccc; */
-    box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+      flex-direction: column;
+      padding: 10px;
   }
 
   .navigation ul {
-    flex-direction: column;
-    padding: 0;
-    margin: 10px;
+      gap: 20px;
+      flex-wrap: wrap;
   }
 
-  .navigation li {
-    width: 100%;
-    text-align: left;
-    margin: 10px 0;
+  .intro {
+      flex-direction: column;
+      height: auto;
+      padding: 20px;
   }
 
-  /* Hide social icons on mobile */
-  .social-icons {
-    display: none;
-  }
-  .img-line{
-    display: none;
-  }
-   /* Show the hamburger icon */
-   .hamburger {
-    display: flex;
+  .intro-content {
+      text-align: center;
+      align-items: center;
+      margin: 0;
   }
 
-  /* Show menu when active */
-  .navigation.show {
-    display: flex;
+  .intro-title {
+      font-size: 60px;
+      margin-left: 0;
   }
 
-  /* Animate the bars on click */
-  .bar.open {
-    background-color: #f16982;
-  }
-  .social-icons a {
-      width: 36px;
-      height: 36px;
+  .intro-description {
+      width: 90%;
+      margin: 0 auto;
   }
 
-  .intro{
-    width: 100%;
+  .intro-image {
+      width: 100%;
+      height: auto;
+      margin-right: 0;
   }
-  .intro-content{
-    margin-left: 10%;
-    margin-right: -5%;
-  }
-  .about-content{
-    margin-left: 8%;
-  }
-  .right-section{
-    margin-left: -7%;
-  }
-  .music-content{
-    margin-left: 50px;
-  }
-  .left-section{
-    margin-left: 3%;
-  }
-  .crocheting-content{
-    margin-right: 0%;
-  }
-  .community{
-    gap: 40px;
-  }
-  .community-content{
-    margin-left: 115px;
-  }
-  .sports-content{
-    margin-left: 4%;
-  }
-  .certificates{
-    height: 80vh;
-    padding-top: 1%;
-  }
-  .certificates-content{
-    height: 55%;
-  }
-  .resume{
-    height: 35vh;
-  }
-  .footer-navigation{
-    justify-content: space-between;
-  }
-
 }
 
+/* Hamburger Icon Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-right: 20px;
+}
 
+.bar {
+  height: 3px;
+  width: 30px;
+  background-color: black;
+  margin: 4px;
+  transition: all 0.3s ease;
+}
+
+.span {
+  font-size: 100px;
+  color: rgb(244, 166, 160);
+  font-weight: 700;
+}
 @media (max-width: 768px) {
   body, html {
     margin: 0;
@@ -1263,7 +1145,6 @@ height: 24px;
   .portfolio-header {
       flex-direction: row;
       padding: 15px;
-      margin-bottom: 35%;
   }
 
   .name {
@@ -1326,8 +1207,7 @@ height: 24px;
   .intro {
       flex-direction: column;
       padding: 10px;
-      margin-bottom: 30%;
-      height: 100vh;
+      margin-bottom: -22px;
   }
 
   .text-image{
@@ -1358,7 +1238,7 @@ height: 24px;
     align-items: flex-start;
   }
   .title-img{
-    margin-left: -25%;
+    margin-left: -25px;
   }
   .intro-image{
     height: 700px;
@@ -1422,11 +1302,9 @@ height: 24px;
   height: 100%;
   margin-top: 60px;
   gap: 60px;
-  margin-bottom: 12%;
  }
-
  .crocheting-content{
-  margin-left: -3%;
+  margin-left: 100px;
  }
  .crocheting-quote{
   font-size: 25px;
@@ -1439,7 +1317,7 @@ height: 24px;
   margin: 0px;
  }
  .right-section{
-  margin-left: -18%;
+  margin-left: 0px;
  }
  .crocheting-image{
   width: 565px;
@@ -1455,7 +1333,7 @@ height: 24px;
   gap: 60px;
  }
  .left-section{
-  margin-left: -21%;
+  margin-left: 0px;
  }
  .sports-image{
   width: 565px;
@@ -1463,23 +1341,19 @@ height: 24px;
   aspect-ratio: 565/710;
  }
  .music-content{
-  margin-left: -3%;
+  margin-left: 100px;
  }
  .music-content p{
   margin: 0px;
  }
-.play-button{
-  margin-left: 22%;
-}
+
  .community{
   margin-top: 50px;
   margin-bottom: 60px;
   flex-direction: column;
-  margin-bottom: 20%;
  }
  .community-content{
-  margin-left: 1%;
-  width: 60%;
+  margin-left: 265px;
  }
  .community-section-title{
   font-size: 40px;
@@ -1494,13 +1368,13 @@ height: 24px;
  }
  .community-content p{
   margin: 0px;
-  width: 100%;
+  width: 70%;
  }
  .community-image{
   width: 565px;
  }
  .circles{
-  margin-top: -14%;
+  margin-top: 0px;
  }
 
  .sports{
@@ -1508,7 +1382,7 @@ height: 24px;
   gap: 60px;
  }
  .sports-content{
-  margin-left: -3%;
+  margin-left: 100px;
  }
  .sports-image{
   margin-bottom: 20px;
@@ -1522,7 +1396,7 @@ height: 24px;
   gap: 60px;
  }
  .leadership-content{
-  margin-left: -3%;
+  margin-left: 105px;
  }
  .leadership-section-title{
   width: 400px;
@@ -1544,7 +1418,7 @@ height: 24px;
   width: 565px;
  }
  .languages-content{
-  margin-left: -3%;
+  margin-left: 100px;
  }
  .languages-content p{
   margin: 0px;
@@ -1560,7 +1434,7 @@ height: 24px;
  .certificates-content{
   flex-direction: column;
   width: 600px;
-  margin-left: 10%;
+  margin-left: 20px;
   margin-top: -100px;
  }
  .certificates-content img:nth-child(2) {
@@ -1610,7 +1484,7 @@ height: 24px;
 
 }
 
-@media (max-width: 567px) {
+@media (max-width: 480px) {
   body, html {
     margin: 0;
     padding: 0;
@@ -1650,8 +1524,7 @@ height: 24px;
   .navigation li {
     width: 100%;
     text-align: left;
-    font-size: 16px;
-    margin: 3px 0;
+    margin: 10px 0;
   }
 
   /* Hide social icons on mobile */
@@ -1672,7 +1545,6 @@ height: 24px;
   /* Show menu when active */
   .navigation.show {
     display: flex;
-    margin-top: -3%;
   }
 
   /* Animate the bars on click */
@@ -1687,6 +1559,7 @@ height: 24px;
   .intro {
       flex-direction: column;
       padding: 10px;
+      margin-bottom: -22px;
   }
 
   .text-image{
@@ -1706,14 +1579,11 @@ height: 24px;
       font-size: 16px;
       width: 80%;
   }
-  .title-img{
-    margin-left: -10%;
-  }
 
   .portfolio-button {
       width: 150px;
       height: 50px;
-      /* margin-left: 26%; */
+      margin-left: 26%;
       font-size: 16px;
   }
 
@@ -1752,7 +1622,7 @@ height: 24px;
     display: none;
   }
   .section-title {
-      font-size: 40px;
+      font-size: 50px;
       margin-left: 0;
   }
 
@@ -1776,54 +1646,58 @@ height: 24px;
   }
 
   .quote-icon {
-      width: 70px;
-      height: 70px;
+      width: 80px;
+      height: 80px;
   }
-  .crocheting-content{
-    width: 100%;
-    padding-left: 34%;
-  }
-  .crocheting-quote{
-    font-size: 20px;
-  }
-  .crocheting-image{
-    width: 84%;
-  }
-  .right-section{
-    width: 100%;
-    margin-left: 15%;
-  }
-  
+
+ .crocheting{
+  flex-direction: column;
+  height: 100%;
+  margin-top: 60px;
+  gap: 60px;
+ }
+ .crocheting-content{
+  margin-left: 100px;
+ }
+ .crocheting-quote{
+  font-size: 25px;
+  height: 90px;
+ }
+ .author-quote{
+  font-size: 22px;
+ }
+ .crocheting-content p{
+  margin: 0px;
+ }
+ .right-section{
+  margin-left: 0px;
+ }
+ .crocheting-image{
+  width: 565px;
+ }
+ .line-divider{
+  display: none;
+  width: 800px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+ }
  .music{
   flex-direction: column-reverse;
   gap: 60px;
  }
  .left-section{
-  width: 100%;
-  margin-left: 15%;
+  margin-left: 0px;
  }
  .sports-image{
-  width: 85%;
-  height: 85%;
+  width: 565px;
+  height: 680px;
+  aspect-ratio: 565/710;
  }
  .music-content{
-  margin-left: 37%;
-  width: 100%;
- }
- .music-content blockquote{
-  width: 80%;
-  /* margin-bottom: 0px; */
+  margin-left: 100px;
  }
  .music-content p{
   margin: 0px;
- }
- .play-button{
-  margin-left: -5%
-  
- }
- .play-icon{
-  width: 150px;
-  height: 150px;
  }
 
  .community{
@@ -1832,16 +1706,15 @@ height: 24px;
   flex-direction: column;
  }
  .community-content{
-width: 100%;
-padding-left: 34%;
+  margin-left: 265px;
  }
  .community-section-title{
-  font-size: 36px;
+  font-size: 40px;
   height: 100px;
   margin-left: 0px;
  }
  .community-quote{
-  margin-top: 20px;
+  margin-top: 30px;
  }
  .community-author-quote{
   font-size: 22px;
@@ -1851,13 +1724,10 @@ padding-left: 34%;
   width: 70%;
  }
  .community-image{
-  width: 84%;
- }
- .community .right-section, .leadership .right-section{
-  margin-left: 15%;
+  width: 565px;
  }
  .circles{
-  margin-top: -20%;
+  margin-top: 0px;
  }
 
  .sports{
@@ -1865,11 +1735,7 @@ padding-left: 34%;
   gap: 60px;
  }
  .sports-content{
-  margin-left: 37%;
-  width: 100%;
- }
- .sports-quote{
-  font-size: 20px;
+  margin-left: 100px;
  }
  .sports-image{
   margin-bottom: 20px;
@@ -1880,18 +1746,14 @@ padding-left: 34%;
 
  .leadership{
   flex-direction: column;
+  gap: 60px;
  }
  .leadership-content{
-  margin-left: 37%;
-  width: 100%;
+  margin-left: 105px;
  }
  .leadership-section-title{
   width: 400px;
   margin-left: 0px;
-  font-size: 50px;
- }
- .leadership-quote{
-  font-size: 22px;
  }
  .leadership-author-quote{
   font-size: 22px;
@@ -1900,38 +1762,32 @@ padding-left: 34%;
   margin: 0px;
  }
  .leadership-image{
-  width: 84%;
+  width: 565px;
  }
  .languages{
   flex-direction:  column-reverse;
-  margin-bottom: 0%;
  }
  .languages-image{
-  width: 84%;
+  width: 565px;
  }
  .languages-content{
-  margin-left: 37%;
-  width: 100%;
+  margin-left: 100px;
  }
  .languages-content p{
   margin: 0px;
  }
- .languages-content blockquote{
-  font-size: 20px;
-  height: 30px;
- }
 
  .certificates{
   height: 870px;
-  margin-top: 70px;
+  margin-top: 170px;
  }
  .certificates-icon{
   margin-left: 25px;
  }
  .certificates-content{
   flex-direction: column;
-  width: 90%;
-  margin-left: 6%;
+  width: 600px;
+  margin-left: 20px;
   margin-top: -100px;
  }
  .certificates-content img:nth-child(2) {
@@ -1939,7 +1795,7 @@ padding-left: 34%;
 }
 
  .resume {
-  height: 50vh;
+  height: 500px;
  }
 
  .resume-icon{
@@ -1947,24 +1803,22 @@ padding-left: 34%;
  }
 
  .quote-button{
-  /* padding: 60px; */
-  padding-left: 8%;
-  padding-right: 10%;
-  padding-top: 0%;
-  padding-bottom: 0%;
+  width: 500px;
+  padding: 60px;
   margin-left: 50px;
   flex-direction: column;
   align-items: flex-start;
  }
 
  .resume-quote{
-  font-size: 20px;
+  font-size: 25px;
+  width: 500px;
   margin-bottom: 40px;
  }
 
  .resume-button{
-  width: 180px;
-  height: 50px;
+  width: 230px;
+  height: 60px;
   font-size: 20px;
   /* text-align: left; */
  }
@@ -1976,9 +1830,6 @@ padding-left: 34%;
  .name-dev{
   height: 130px;
   width: 350px;
- }
- .portfolio-footer, .footer-span{
-  font-size: 16px;
  }
  .social-icons-footer{
   margin-right: 40px;

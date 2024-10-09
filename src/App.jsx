@@ -1,4 +1,5 @@
 import "./App.css";
+// import "./main.css";
 import  { useState, useEffect, useRef } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
@@ -143,7 +144,7 @@ const Portfolio = () => {
         <h1 className="name"  onClick={() => window.location.reload()}>
           <span className="name_span"  onClick={() => window.location.reload()}>Myda</span>Gilani
         </h1>
-        <dev className="nav-container" ref={menuRef}>
+        <div className="nav-container" ref={menuRef}>
        {/* Hamburger Icon for Mobile */}
        <div className="hamburger" onClick={toggleMenu}>
           <span className={`bar ${isOpen ? 'open' : ''}`}></span>
@@ -184,7 +185,7 @@ const Portfolio = () => {
               <img src="./assets/group-9.svg" alt="twitter Icon" />
             </a>
           </div>
-        </dev>
+        </div>
       </header>
 
       <main className="main-content">
