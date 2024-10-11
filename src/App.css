@@ -491,7 +491,7 @@ height: 24px;
   }
  .sports-image{
    max-width: 700px;
-   width: 100%;
+   width: 90%;
    border-radius: 50% 50% 0% 0%;
    aspect-ratio: 700 / 750;
    object-fit: cover;

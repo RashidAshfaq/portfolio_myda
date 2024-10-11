@@ -29,10 +29,10 @@ const Portfolio = () => {
     const handlePlayPause = () => {
         if (isPlaying) {
             videoRef.current.pause(); // Pause the video
-            firstVideoRef.current.pause();
+            // firstVideoRef.current.pause();
         } else {
             videoRef.current.play(); // Play the video
-            firstVideoRef.current.play();
+            // firstVideoRef.current.play();
         }
         setIsPlaying(!isPlaying); // Toggle the playing state
     };
@@ -336,7 +336,7 @@ const Portfolio = () => {
               ref={firstVideoRef} 
               // muted 
               loop 
-              onClick={handlePlayPause}
+              onClick={handlePlayMusicPause}
             >
               <source src={music_video[activeVideoIndex]} type="video/mp4" />
               Your browser does not support the video tag.
