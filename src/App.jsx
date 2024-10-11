@@ -332,6 +332,56 @@ const Portfolio = () => {
           />
 
          {/* Music Section */}
+
+         {/* testing com */}
+            
+         <section className="crocheting" id="passion">
+            <div className="row">
+        
+       
+          <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          <video
+              className="sports-image"
+              ref={firstVideoRef} 
+              // muted 
+              loop 
+              onClick={handlePlayPause}
+            >
+              <source src={music_video[activeVideoIndex]} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            {!isPlaying && (
+                <button className="play-button" onClick={handlePlayPause}>
+                  <img src='./assets/Group_28.svg' alt="Play Button" className="play-icon" />
+                </button>
+            )}
+          </div>
+
+          <div className="crocheting-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div className="crocheting-icon">
+          <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
+          <h3 className="section-title">Music</h3>
+            </div>
+            <div className="crocheting-margin">
+          <blockquote className="crocheting-quote">
+          “Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.”
+          </blockquote>
+          <blockquote className="author-quote">
+          <img
+            src="./assets/line-10.svg"
+            alt="line"
+            className="line"
+          />Plato
+          </blockquote>
+          <p className="section-description">
+          In 2nd grade, one of my closest friends played the piano beautifully at the school assembly. I was inspired. Shortly after that, the Covid 19 Pandemic started. It was the best time to learn a new skill. My dad bought a piano and I learnt to read sheet music and play many songs by watching YouTube tutorials. I still take piano lessons at a Conservatory and now I am developing a higher level of skills by learning to play difficult classical pieces. I have performed in the Rivers Conservatory Recital, playing an intermediate piece for an audience.
+          </p>
+          </div>
+          </div>
+          </div>
+        </section>
+             {/* end */}
+
          <section className="music">
           <div className="left-section">
           {/* <img
