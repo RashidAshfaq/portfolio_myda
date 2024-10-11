@@ -189,12 +189,14 @@ const Portfolio = () => {
       </header>
 
       <main className="main-content">
-        <section className="intro" id="home">
-          <div className="intro-content">
+      <section className="intro" id="home">
+        <div className="row ">
+          <div className="intro-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-lg d-flex justify-content-center align-items-center align-items-md-start align-items-sm-start">
           <div  className="title-img">
           <img src="./assets/ellipse-4.svg" alt="Myda" className="text-image" />
           <h2 className="intro-title"><span  className="span">Myda</span> Gilani</h2>
           </div>
+          <div className="d-flex flex-column justify-content-start header-p-btn">
           <p className="intro-description">
           Contrary to popular belief, Lorem Ipsum is not simply random text.
            It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
@@ -203,24 +205,34 @@ const Portfolio = () => {
         <Link to="passion" smooth={true} duration={500}>
           <button className="portfolio-button">My Portfolio</button>
         </Link>
+        </div>
           </div>
-          <div className="intro-img">
+          <div className="intro-img col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-lg d-flex justify-content-center align-items-center ">
           <img src="./assets/mg-1.svg" alt="Myda" className="intro-image" />
+          </div>
           </div>
         </section>
 
         {/* About Me Section */}
         <section className="about-me" id="about">
+          <div className="row">
+          <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-lg order-last order-sm-last order-lg-first">
+            <div>
           <img
             src="./assets/mask-group.svg"
             alt="About Me"
             className="section-image"
           />
-          <div className="about-content">
+          </div>
+          </div>
+          <div className="about-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-lg d-flex justify-content-center align-items-center align-items-md-start align-items-sm-start order-first order-sm-first order-lg-last">
+            <div className="about-padding"
+            >
             <div className="about-icon">
           <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
           <h3 className="section-title">About Me</h3>
             </div>
+            <div className="about-margin-lft">
           <p className="section-description">
           You can express yourself however you want and whenever you want, for free. You can customize a template or make your own from scratch, with an immersive library at your disposal. You can express yourself however you want and whenever you free.
           You can customize a template or make your own from scratch, with an immersive library at your disposal.
@@ -252,15 +264,20 @@ const Portfolio = () => {
             </a>
           </div>
           </div>
+          </div>
+          </div>
+          </div>
         </section>
 
           {/* Crocheting Section */}
           <section className="crocheting" id="passion">
-          <div className="crocheting-content">
+            <div className="row">
+          <div className="crocheting-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
             <div className="crocheting-icon">
           <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
           <h3 className="section-title">Crocheting</h3>
             </div>
+            <div className="crocheting-margin">
           <blockquote className="crocheting-quote">
           “The finest thing about a hobby is that you can’t do any pretending about it. You either like it or you don’t.”
           </blockquote>
@@ -275,6 +292,7 @@ const Portfolio = () => {
           I started crocheting in 4th grade, during the Pandemic. My grandma used to live with us then, and around the house she would carry her knitting needles and her crocheting hooks, making new sweaters or hats for my siblings and I. I was very intrigued by how one small hook and yarn could create such a meaningful piece to wear, or even a stuffed animal. I learnt from her and now I am able to make blankets and hair ties, with a crochet hook! For me, crocheting is relaxing and very meaningful. Every piece counts, even the beginner ones to the advanced.
           </p>
           </div>
+          </div>
           {/* <div className="right-section">
           <img
             src="./assets/mask-group-5.svg"
@@ -287,7 +305,7 @@ const Portfolio = () => {
             className="dot-image"
           />
           </div> */}
-          <div className="right-section">
+          <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
             <img
               src={images[activeIndex]}
               alt="crocheting-image"
@@ -303,6 +321,7 @@ const Portfolio = () => {
               />
             ))}
             </div>
+          </div>
           </div>
         </section>
         {/* Line Divider */}
@@ -588,18 +607,22 @@ const Portfolio = () => {
 
       {/* Arrow Controls */}
       <div className="arrows">
+      
         <img
           src="./assets/maki-arrow-2.svg"
           alt="Left Arrow"
           onClick={handleLeftClick}
           className={`arrow ${currentStartIndex  === 0 ? 'disabled' : ''}`}
         />
+       
+     
         <img
           src="./assets/maki-arrow.svg"
           alt="Right Arrow"
           onClick={handleRightClick}
           className={`arrow ${currentStartIndex  >= allCertificates.length - 2 ? 'disabled' : ''}`}
         />
+        
       </div>
       </section>
       {/* Resume SEction */}
