@@ -229,7 +229,7 @@ height: 24px;
    
     display: flex;
     align-items: center;
-   
+   padding: 3% 3% 0 3%;
     background-color: #FEF7F6;
   }
   
@@ -249,6 +249,7 @@ height: 24px;
     
   }
   .section-image{
+    max-width: 700px;
    width: 100%;
   }
   .about-padding{
@@ -1268,6 +1269,10 @@ height: 24px;
 .resume-quote{
   width: 90%;
 }
+.section-image {
+
+  width: 84%;
+}
 }
 
 @media (max-width: 768px) {
@@ -1462,7 +1467,7 @@ height: 24px;
  margin-top: 5%;
  }
  .crocheting-image{
-  width: 565px;
+  
  }
  .line-divider{
   display: none;
@@ -1478,7 +1483,7 @@ height: 24px;
   margin-left: -21%;
  }
  .sports-image{
-  /* height: 680px; */
+  
   aspect-ratio: 565/710;
  }
  .music-content{
@@ -1823,7 +1828,7 @@ height: 24px;
   margin-left: 15%;
  }
  .sports-image{
-  /* height: 85%; */
+  width: 90%;
  }
  .music-content{
   margin-left: 37%;
@@ -1890,6 +1895,7 @@ padding-left: 34%;
   font-size: 20px;
  }
  .sports-image{
+  width: 84%;
  }
  .sports-content p{
   margin: 0px;

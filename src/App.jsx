@@ -216,14 +216,14 @@ const Portfolio = () => {
         {/* About Me Section */}
         <section className="about-me" id="about">
           <div className="row">
-          <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-lg order-last order-sm-last order-lg-first">
-            <div>
+          <div className="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-lg order-last order-sm-last order-lg-first d-flex justify-content-center">
+          
           <img
-            src="./assets/mask-group.svg"
+            src="./assets/aboutImg.png"
             alt="About Me"
-            className="section-image"
+            className="crocheting-image"
           />
-          </div>
+         
           </div>
           <div className="about-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-lg d-flex justify-content-center align-items-center align-items-md-start align-items-sm-start order-first order-sm-first order-lg-last">
             <div className="about-padding"
@@ -755,7 +755,65 @@ const Portfolio = () => {
       /> */}
 
           {/* Languages Section */}
-          <section className="languages">
+
+          <section className="crocheting" id="passion">
+            <div className="row">
+            <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 order-last order-md-last order-lg-first">
+          
+          <img
+          src="./assets/languages.svg"
+            alt="languages-image"
+           className="crocheting-image"
+      />
+        {/* <div className="circles">
+        {images.map((_, index) => (
+          <div
+            key={index}
+            alt="dot-image"
+            className={`dot-image ${index === activeIndex ? 'active' : ''}`}
+            onClick={() => handleCircleClick(index)}
+          />
+        ))}
+        </div> */}
+      </div> 
+          <div className="crocheting-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 order-first order-md-first order-lg-last">
+            <div className="crocheting-icon">
+          <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
+          <h3 className="section-title">Languages</h3>
+            </div>
+            <div className="crocheting-margin">
+          <blockquote className="crocheting-quote">
+          “Knowledge of languages is the doorway to wisdom.”
+          </blockquote>
+          <blockquote className="author-quote">
+          <img
+            src="./assets/line-10.svg"
+            alt="line"
+            className="line"
+          />Roger Bacon
+          </blockquote>
+          <p className="section-description">
+          I belong to a multilingual home. My family can speak and/or understand English, Urdu, Arabic, Spanish and Latin. My parents speak Urdu with us and I take bi weekly Arabic classes online to learn to read the Quran. I have intermediate fluency in Spanish and I just took the National Latin Exam in the spring of 2024. I was one of the 12 students in my grade to receive an honorable mention and a Cum Laude Certificate for my performance. Languages are a means of connecting with other people and to understand them. I am very happy to be multilingual.
+          </p>
+          </div>
+          </div>
+          {/* <div className="right-section">
+          <img
+            src="./assets/mask-group-5.svg"
+            alt="crocheting-image"
+            className="crocheting-image"
+          />
+          <img  
+            src="./assets/group-21.svg"
+            alt="dot-image"
+            className="dot-image"
+          />
+          </div> */}
+        
+          </div>
+        </section>
+          
+          {/* <section className="languages">
           <div className="left-section">
           <img
             src="./assets/languages.svg"
@@ -782,7 +840,7 @@ const Portfolio = () => {
           I belong to a multilingual home. My family can speak and/or understand English, Urdu, Arabic, Spanish and Latin. My parents speak Urdu with us and I take bi weekly Arabic classes online to learn to read the Quran. I have intermediate fluency in Spanish and I just took the National Latin Exam in the spring of 2024. I was one of the 12 students in my grade to receive an honorable mention and a Cum Laude Certificate for my performance. Languages are a means of connecting with other people and to understand them. I am very happy to be multilingual.
           </p>
           </div>
-        </section>
+        </section> */}
         <section className="certificates" id="certificates">
         {/* <h3 className="section-title">Certifications</h3> */}
         <div className="certificates-icon">
