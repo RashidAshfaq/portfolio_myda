@@ -339,7 +339,7 @@ const Portfolio = () => {
             <div className="row">
         
        
-          <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 order-last order-sm-last order-lg-first" >
           <video
               className="sports-image"
               ref={firstVideoRef} 
@@ -357,7 +357,7 @@ const Portfolio = () => {
             )}
           </div>
 
-          <div className="crocheting-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          <div className="crocheting-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 order-first order-sm-first order-lg-last">
             <div className="crocheting-icon">
           <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
           <h3 className="section-title">Music</h3>
@@ -382,13 +382,9 @@ const Portfolio = () => {
         </section>
              {/* end */}
 
-         <section className="music">
+         {/* <section className="music">
           <div className="left-section">
-          {/* <img
-            src="./assets/mask-group-2.svg"
-            alt="music-image"
-            className="music-image"
-          /> */}
+         
            <video
               className="sports-image"
               ref={firstVideoRef} 
@@ -425,7 +421,7 @@ const Portfolio = () => {
           In 2nd grade, one of my closest friends played the piano beautifully at the school assembly. I was inspired. Shortly after that, the Covid 19 Pandemic started. It was the best time to learn a new skill. My dad bought a piano and I learnt to read sheet music and play many songs by watching YouTube tutorials. I still take piano lessons at a Conservatory and now I am developing a higher level of skills by learning to play difficult classical pieces. I have performed in the Rivers Conservatory Recital, playing an intermediate piece for an audience.
           </p>
           </div>
-        </section>
+        </section> */}
 
         {/* Line Divider */}
         <img
@@ -493,27 +489,69 @@ const Portfolio = () => {
             className="line-divider"
           />
 
-
-         {/* sports Section */}
-         <section className="sports">
-          {/* <div className="left-section">
-          <img
-            src="./assets/mask-group-3.svg"
-            alt="sports-image"
-            className="sports-image"
-          />
-          <img  
-            src="./assets/group-23.svg"
-            alt="dot-image"
-            className="dot-image"
-          />
-          </div> */}
-          <div className="left-section">
-            {/* <img
-              src={sports_videos[activeVideoIndex]}
-              alt="sports-image"
+{/* testing com */}
+            
+<section className="crocheting" id="passion">
+            <div className="row">
+        
+       
+          <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 order-last order-sm-last order-lg-first" >
+          <video
               className="sports-image"
-            /> */}
+              ref={videoRef} 
+              // muted 
+              loop 
+              onClick={handlePlayPause}
+            >
+              <source src={sports_videos[activeVideoIndex]} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            {!isPlaying && (
+                <button className="play-button" onClick={handlePlayPause}>
+                  <img src='./assets/Group_28.svg' alt="Play Button" className="play-icon" />
+                </button>
+            )}
+            <div className="circles">
+            {sports_videos.map((_, index) => (
+              <div
+                key={index}
+                alt="dot-image"
+                className={`dot-image ${index === activeVideoIndex ? 'active' : ''}`}
+                onClick={() => handleCircleVideoClick(index)}
+              />
+            ))}
+            </div>
+          </div>
+
+          <div className="crocheting-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 order-first order-sm-first order-lg-last">
+            <div className="crocheting-icon">
+          <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
+          <h3 className="section-title">Sports</h3>
+            </div>
+            <div className="crocheting-margin">
+          <blockquote className="crocheting-quote">
+          “Winning isn't everything, but wanting to win is”
+          </blockquote>
+          <blockquote className="author-quote">
+          <img
+            src="./assets/line-10.svg"
+            alt="line"
+            className="line"
+          />Vince Lombardi
+          </blockquote>
+          <p className="section-description">
+          I started playing tennis when I was six years old. I have been exposed to racquet sports all of my life, and was very honored to become the JV Tennis captain in 6th grade. I have been a constant leader in my main sport, although I enjoy playing soccer - as I have been in the Varsity Soccer team at Nashoba Brooks school for the past three years.
+          </p>
+          </div>
+          </div>
+          </div>
+        </section>
+             {/* end */}
+         {/* sports Section */}
+         {/* <section className="sports">
+          
+          <div className="left-section">
+            
             <video
               className="sports-image"
               ref={videoRef} 
@@ -560,7 +598,7 @@ const Portfolio = () => {
           I started playing tennis when I was six years old. I have been exposed to racquet sports all of my life, and was very honored to become the JV Tennis captain in 6th grade. I have been a constant leader in my main sport, although I enjoy playing soccer - as I have been in the Varsity Soccer team at Nashoba Brooks school for the past three years.
           </p>
           </div>
-        </section>
+        </section> */}
       
        {/* Line Divider */}
        <img

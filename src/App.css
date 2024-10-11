@@ -349,7 +349,6 @@ height: 24px;
     font-family: 'Playfair Display', serif;
     margin: 20px 0;
     color: #333;
-    width: 50%;
   }
   .author-quote {
     font-size: 24px;
@@ -490,20 +489,17 @@ height: 24px;
     
   }
  .sports-image{
-   height: 750px;
-   width: 680px;
+   max-width: 700px;
+   width: 100%;
    border-radius: 50% 50% 0% 0%;
-   aspect-ratio: 680 / 750;
+   aspect-ratio: 700 / 750;
    object-fit: cover;
    display: block;
    z-index: 1;
  }
  .play-button {
     position: absolute;   
-    top: 50%;             /* Center vertically */
-    left: 50%;            /* Center horizontally */
-    transform: translate(-50%, -50%); /* Offset the button's own size */
-    /* background-color: rgba(255, 255, 255, 0.7);  */
+ 
     background: none;
     border: none;        /* No border */
     padding: 10px 20px;  /* Padding around the button */
@@ -981,8 +977,7 @@ width: 80%;
   width: 50%;
  }
  .sports-image{
-  width: 565px;
-  height: 680px;
+  /* height: 680px; */
   aspect-ratio: 565/680;
   z-index: 1;
  }
@@ -1038,7 +1033,6 @@ width: 80%;
   width: 50%;
  }
  .sports-image{
-  margin-bottom: 20px;
  }
  .sports-content p{
   margin: 0px;
@@ -1484,8 +1478,7 @@ width: 80%;
   margin-left: -21%;
  }
  .sports-image{
-  width: 565px;
-  height: 680px;
+  /* height: 680px; */
   aspect-ratio: 565/710;
  }
  .music-content{
@@ -1495,7 +1488,6 @@ width: 80%;
   margin: 0px;
  }
 .play-button{
-  margin-left: 22%;
 }
  .community{
   margin-top: 50px;
@@ -1537,7 +1529,6 @@ width: 80%;
   margin-left: -3%;
  }
  .sports-image{
-  margin-bottom: 20px;
  }
  .sports-content p{
   margin: 0px;
@@ -1832,8 +1823,7 @@ width: 80%;
   margin-left: 15%;
  }
  .sports-image{
-  width: 85%;
-  height: 85%;
+  /* height: 85%; */
  }
  .music-content{
   margin-left: 37%;
@@ -1847,12 +1837,11 @@ width: 80%;
   margin: 0px;
  }
  .play-button{
-  margin-left: -5%
   
  }
  .play-icon{
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
  }
 
  .community{
@@ -1901,7 +1890,6 @@ padding-left: 34%;
   font-size: 20px;
  }
  .sports-image{
-  margin-bottom: 20px;
  }
  .sports-content p{
   margin: 0px;
