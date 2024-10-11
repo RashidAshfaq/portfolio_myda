@@ -25,24 +25,22 @@ const Portfolio = () => {
       './assets/video_.mp4',
     ]);
     const [isPlaying, setIsPlaying] = useState(false); // State to track if the video is playing
-
+    const [isSportPlaying, setIsSportPlaying] = useState(false); 
     const handlePlayPause = () => {
         if (isPlaying) {
             videoRef.current.pause(); // Pause the video
-            // firstVideoRef.current.pause();
         } else {
             videoRef.current.play(); // Play the video
-            // firstVideoRef.current.play();
         }
         setIsPlaying(!isPlaying); // Toggle the playing state
     };
     const handlePlayMusicPause = () => {
-      if (isPlaying) {
+      if (isSportPlaying) {
           firstVideoRef.current.pause();
       } else {
           firstVideoRef.current.play();
       }
-      setIsPlaying(!isPlaying); // Toggle the playing state
+      setIsSportPlaying(!isSportPlaying); // Toggle the playing state
   };
 
   
@@ -60,9 +58,6 @@ const Portfolio = () => {
   const handleCircleVideoClick = (index) => {
     setActiveVideoIndex(index);
     videoRef.current.load(); // Reload the video when index changes
-    // firstVideoRef.current.load();
-    videoRef.current.play();  // Play the video
-    firstVideoRef.current.play();
   };
     const handleCircleClick = (index) => {
       setActiveIndex(index);
@@ -341,7 +336,7 @@ const Portfolio = () => {
               <source src={music_video[activeVideoIndex]} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            {!isPlaying && (
+            {!isSportPlaying && (
                 <button className="play-button" onClick={handlePlayMusicPause}>
                   <img src='./assets/Group_28.svg' alt="Play Button" className="play-icon" />
                 </button>
