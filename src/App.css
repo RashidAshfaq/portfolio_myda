@@ -933,7 +933,7 @@ height: 24px;
  .crocheting{
   flex-direction: row;
   height: 100%;
-  margin-top: 60px;
+ padding-top: 5%;
   gap: 40px;
  }
  .crocheting-content{
@@ -1399,7 +1399,7 @@ height: 24px;
   }
   .about-content {
       margin-left: 0;
-      text-align: center;
+     
   }
   .about-icon{
    
@@ -1446,7 +1446,7 @@ height: 24px;
  .crocheting{
   
  
-  margin-top: 60px;
+  padding-top: 5%;
  
  }
 
@@ -1711,7 +1711,7 @@ height: 24px;
 
   .intro {
       flex-direction: column;
-      padding: 10px;
+     
   }
 
   .text-image{
@@ -1743,7 +1743,7 @@ height: 24px;
   }
 
   .intro-content{
-    align-items: flex-start;
+    align-items: start;
   }
   /* .title-img{
     margin-left: -25px;
@@ -1761,7 +1761,7 @@ height: 24px;
   .about-content {
       width: 100%;
  
-      text-align: center;
+     
   }
   .about-icon{
   
