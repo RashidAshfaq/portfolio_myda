@@ -195,8 +195,7 @@ const Portfolio = () => {
           </div>
           <div className="d-flex flex-column justify-content-start header-p-btn">
           <p className="intro-description">
-          Contrary to popular belief, Lorem Ipsum is not simply random text.
-           It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. 
+          Discover my passions for crocheting, music, community engagement, sports, leadership, and languages. Each of these experiences has shaped who I am and continues to fuel my creativity and personal growth.
           </p>
            {/* Portfolio Button with Scroll to Passion Section */}
         <Link to="passion" smooth={true} duration={500}>
@@ -231,8 +230,7 @@ const Portfolio = () => {
             </div>
             <div className="about-margin-lft">
           <p className="section-description">
-          You can express yourself however you want and whenever you want, for free. You can customize a template or make your own from scratch, with an immersive library at your disposal. You can express yourself however you want and whenever you free.
-          You can customize a template or make your own from scratch, with an immersive library at your disposal.
+          I started my creative journey early, from learning crocheting during the pandemic to playing the piano and actively engaging in my community. Whether it’s through sports or volunteering, I find joy in leadership and personal growth. Every experience has given me new perspectives, and I’m excited to share them with you.
           </p>
           <blockquote className="quote">
            Follow me on:
@@ -784,12 +782,12 @@ const Portfolio = () => {
     </section>
       {/* navigation section  */}
       <section className="footer-navigation">
-      <div className="name-dev">
+      <div className="name-dev col-4">
         <h3 className="name">
           <span className="name_span_dev">Myda</span>Gilani
         </h3>
        </div>
-       <dev className="nav-container" style={{ marginLeft: "60px"}}>
+       <dev className="nav-container col-8"  >
           <nav className="navigation">
             <ul style={{gap: 40, border: "none"}}>
             <li><Link className="link" to="home" smooth={true} duration={500}>Home</Link></li>
