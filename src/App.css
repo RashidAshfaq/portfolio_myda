@@ -6,8 +6,6 @@ body, html {
   
   .portfolio {
     margin: 0 auto;
-    overflow-x: hidden;
-    /* padding: 20px; */
   }
   
   .portfolio-header {
@@ -1151,6 +1149,9 @@ width: 80%;
   .portfolio-header {
       flex-direction: row;
       padding: 15px;
+      position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the page */
+    z-index: 1000; /* Ensure the header stays above other content */
   }
 
   .name {
@@ -1280,6 +1281,9 @@ width: 80%;
   .portfolio-header {
       flex-direction: row;
       padding: 15px;
+      position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the page */
+    z-index: 1000; /* Ensure the header stays above other content */
       
   }
 
@@ -1639,7 +1643,9 @@ width: 80%;
 }
   .portfolio-header {
       flex-direction: row;
-      /* padding: 15px; */
+      position: sticky; /* Make the header sticky */
+    top: 0; /* Stick to the top of the page */
+    z-index: 1000; /* Ensure the header stays above other content */
   }
 
   .name {
