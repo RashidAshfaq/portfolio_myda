@@ -1,5 +1,4 @@
 import "./App.css";
-// import "./main.css";
 import  { useState, useEffect, useRef } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
@@ -7,7 +6,7 @@ const Portfolio = () => {
   
     const [activeIndex, setActiveIndex] = useState(0);
     const [activeVideoIndex, setActiveVideoIndex] = useState(0);
-    const [fileUrl, setFileUrl] = useState("https://drive.google.com/uc?export=download&id=1zaVr954RDx1eDEn_MDu8BfAW1t_fDf6P");
+    const [fileUrl, setFileUrl] = useState("./assets/resume.pdf");
     const [images, setImages] = useState([
       './assets/mask-group-5.svg',
       './assets/mask-group-9.svg',
@@ -37,6 +36,15 @@ const Portfolio = () => {
         }
         setIsPlaying(!isPlaying); // Toggle the playing state
     };
+    const handlePlayMusicPause = () => {
+      if (isPlaying) {
+          firstVideoRef.current.pause();
+      } else {
+          firstVideoRef.current.play();
+      }
+      setIsPlaying(!isPlaying); // Toggle the playing state
+  };
+
   
     useEffect(() => {
       const intervalId = setInterval(() => {
@@ -45,13 +53,7 @@ const Portfolio = () => {
       return () => clearInterval(intervalId);
     }, [images.length, community_images.length]);
 
-  //   useEffect(() => {
-  //    const intervalVideoId = setInterval(() => {
-  //      setActiveVideoIndex((prevIndex) => (prevIndex + 1) % sports_videos.length);
-  //    }, 10000); // update every 2s
-  //    return () => clearInterval(intervalVideoId);
-  //  }, [sports_videos.length]);
-    // Handle circle navigation click
+ 
      // Create a ref for the video element
   const videoRef = useRef(null);
   const firstVideoRef = useRef(null);
@@ -293,18 +295,7 @@ const Portfolio = () => {
           </p>
           </div>
           </div>
-          {/* <div className="right-section">
-          <img
-            src="./assets/mask-group-5.svg"
-            alt="crocheting-image"
-            className="crocheting-image"
-          />
-          <img  
-            src="./assets/group-21.svg"
-            alt="dot-image"
-            className="dot-image"
-          />
-          </div> */}
+          
           <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
             <img
               src={images[activeIndex]}
@@ -351,7 +342,7 @@ const Portfolio = () => {
               Your browser does not support the video tag.
             </video>
             {!isPlaying && (
-                <button className="play-button" onClick={handlePlayPause}>
+                <button className="play-button" onClick={handlePlayMusicPause}>
                   <img src='./assets/Group_28.svg' alt="Play Button" className="play-icon" />
                 </button>
             )}
@@ -382,46 +373,6 @@ const Portfolio = () => {
         </section>
              {/* end */}
 
-         {/* <section className="music">
-          <div className="left-section">
-         
-           <video
-              className="sports-image"
-              ref={firstVideoRef} 
-              // muted 
-              loop 
-              onClick={handlePlayPause}
-            >
-              <source src={music_video[activeVideoIndex]} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            {!isPlaying && (
-                <button className="play-button" onClick={handlePlayPause}>
-                  <img src='./assets/Group_28.svg' alt="Play Button" className="play-icon" />
-                </button>
-            )}
-    
-          </div>
-          <div className="music-content">
-            <div className="music-icon">
-          <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
-          <h3 className="section-title">Music</h3>
-            </div>
-          <blockquote className="crocheting-quote">
-          “Music is a moral law. It gives soul to the universe, wings to the mind, flight to the imagination, and charm and gaiety to life and to everything.”
-          </blockquote>
-          <blockquote className="author-quote">
-          <img
-            src="./assets/line-10.svg"
-            alt="line"
-            className="line"
-          />Plato
-          </blockquote>
-          <p className="section-description">
-          In 2nd grade, one of my closest friends played the piano beautifully at the school assembly. I was inspired. Shortly after that, the Covid 19 Pandemic started. It was the best time to learn a new skill. My dad bought a piano and I learnt to read sheet music and play many songs by watching YouTube tutorials. I still take piano lessons at a Conservatory and now I am developing a higher level of skills by learning to play difficult classical pieces. I have performed in the Rivers Conservatory Recital, playing an intermediate piece for an audience.
-          </p>
-          </div>
-        </section> */}
 
         {/* Line Divider */}
         <img
@@ -601,58 +552,7 @@ const Portfolio = () => {
           </div>
         </section>
              {/* end */}
-         {/* sports Section */}
-         {/* <section className="sports">
-          
-          <div className="left-section">
-            
-            <video
-              className="sports-image"
-              ref={videoRef} 
-              // muted 
-              loop 
-              onClick={handlePlayPause}
-            >
-              <source src={sports_videos[activeVideoIndex]} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            {!isPlaying && (
-                <button className="play-button" onClick={handlePlayPause}>
-                    <img src='./assets/Group_28.svg' alt="Play Button" className="play-icon" />
-                </button>
-            )}
-            <div className="circles">
-            {sports_videos.map((_, index) => (
-              <div
-                key={index}
-                alt="dot-image"
-                className={`dot-image ${index === activeVideoIndex ? 'active' : ''}`}
-                onClick={() => handleCircleVideoClick(index)}
-              />
-            ))}
-            </div>
-          </div>
 
-          <div className="sports-content">
-            <div className="sports-icon">
-          <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
-          <h3 className="section-title">Sports</h3>
-            </div>
-          <blockquote className="sports-quote">
-          “Winning isn't everything, but wanting to win is”
-          </blockquote>
-          <blockquote className="author-quote">
-          <img
-            src="./assets/line-10.svg"
-            alt="line"
-            className="line"
-          />Vince Lombardi
-          </blockquote>
-          <p className="section-description">
-          I started playing tennis when I was six years old. I have been exposed to racquet sports all of my life, and was very honored to become the JV Tennis captain in 6th grade. I have been a constant leader in my main sport, although I enjoy playing soccer - as I have been in the Varsity Soccer team at Nashoba Brooks school for the past three years.
-          </p>
-          </div>
-        </section> */}
       
        {/* Line Divider */}
        <img
@@ -847,14 +747,7 @@ const Portfolio = () => {
           <img src="./assets/frame-8.svg" alt="Quote" className="quote-icon" />
           <h3 className="leadership-section-title" style={{color: "#fff"}}>Certifications</h3>
             </div>
-        {/* <div className="certificates-content">
-          <img src="./assets/certificate-3.svg" alt="Certificate 1" />
-          <img src="./assets/mask-group-8.svg" alt="Certificate 2" />
-        </div>
-        <div className="arrows">
-          <img src="./assets/maki-arrow-2.svg" alt="arrow 1" />
-          <img src="./assets/maki-arrow.svg" alt="arrow 2" />
-        </div> */}
+       
       <div className="certificates-content">
       {visibleCertificates.map((src, index) => (
           <img key={index} src={src} alt={`Certificate ${index + 1}`} />
