@@ -435,7 +435,61 @@ const Portfolio = () => {
           />
 
         {/* Community Section */}
-        <section className="community">
+        <section className="crocheting" id="passion">
+            <div className="row">
+          <div className="crocheting-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div className="crocheting-icon">
+          <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
+          <h3 className="section-title">Community Engagement & Volunteerism</h3>
+            </div>
+            <div className="crocheting-margin">
+          <blockquote className="crocheting-quote">
+          “What you do has far greater impact than what you say.”
+          </blockquote>
+          <blockquote className="author-quote">
+          <img
+            src="./assets/line-10.svg"
+            alt="line"
+            className="line"
+          />Stephen Covey, author & educator
+          </blockquote>
+          <p className="section-description">
+          I grew up in a household where volunteering and giving charity was a given. I have always seen my mother giving out charity, and volunteering at local shelters, or even helping out people back home in Pakistan. In the summer of 2024, I volunteered at the migrant shelter in my town. I helped many young children who had been through trauma and separation. I read books to them, heard their stories, played soccer with them and gave them emotional support. All the while realizing how lucky I am. Community engagement is a huge part of my life, as I live in Acton, but receive education in Concord. Remaining close with my town and giving back is one of the many reasons why I love volunteering in Acton.
+          </p>
+          </div>
+          </div>
+          {/* <div className="right-section">
+          <img
+            src="./assets/mask-group-5.svg"
+            alt="crocheting-image"
+            className="crocheting-image"
+          />
+          <img  
+            src="./assets/group-21.svg"
+            alt="dot-image"
+            className="dot-image"
+          />
+          </div> */}
+          <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <img
+              src={community_images[activeIndex]}
+              alt="crocheting-image"
+              className="crocheting-image"
+            />
+            <div className="circles">
+            {images.map((_, index) => (
+              <div
+                key={index}
+                alt="dot-image"
+                className={`dot-image ${index === activeIndex ? 'active' : ''}`}
+                onClick={() => handleCircleClick(index)}
+              />
+            ))}
+            </div>
+          </div>
+          </div>
+        </section>
+        {/* <section className="community">
           <div className="community-content">
             <div className="community-icon">
           <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
@@ -454,7 +508,7 @@ const Portfolio = () => {
           <p className="section-description">
           I grew up in a household where volunteering and giving charity was a given. I have always seen my mother giving out charity, and volunteering at local shelters, or even helping out people back home in Pakistan. In the summer of 2024, I volunteered at the migrant shelter in my town. I helped many young children who had been through trauma and separation. I read books to them, heard their stories, played soccer with them and gave them emotional support. All the while realizing how lucky I am. Community engagement is a huge part of my life, as I live in Acton, but receive education in Concord. Remaining close with my town and giving back is one of the many reasons why I love volunteering in Acton.
           </p>
-          </div>
+          </div> */}
           {/* <div className="right-section">
           <img
             src="./assets/mask-group-6.svg"
@@ -467,7 +521,7 @@ const Portfolio = () => {
             className="dot-image"
           />
           </div> */}
-         <div className="right-section">
+         {/* <div className="right-section">
             <img
               src={community_images[activeIndex]}
               alt="community-image"
@@ -484,7 +538,7 @@ const Portfolio = () => {
             ))}
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Line Divider */}
         <img
@@ -570,8 +624,64 @@ const Portfolio = () => {
         />
         
        {/* Leadership Section */}
-       <section className="leadership">
-          <div className="leadership-content">
+       {/* <section className="leadership"> */}
+       <section className="crocheting" id="passion">
+            <div className="row">
+          <div className="crocheting-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+            <div className="crocheting-icon">
+          <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
+          <h3 className="section-title">Leadership</h3>
+            </div>
+            <div className="crocheting-margin">
+          <blockquote className="crocheting-quote">
+          “What you do has far greater impact than what you say.”
+          </blockquote>
+          <blockquote className="author-quote">
+          <img
+            src="./assets/line-10.svg"
+            alt="line"
+            className="line"
+          />Unknown
+          </blockquote>
+          <p className="section-description">
+          I was elected Student Representative in the spring of 7th grade. Taking the initiative, my co-rep and I planned out the last day of school events, bonding activities, food drives, and more fun things for our grade to participate in. I am able to take on a leadership position with ease and enjoy working with a team or leading projects on my own. I have attended several Model UN Leadership Conferences and camps over the past two years, have represented Turkey, Russia, Afghanistan and the Arctic Circle. I have outlined problems and proposed solutions and have won “ Best Position Paper Award” for my research on air pollution in Russia.
+          </p>
+          </div>
+          </div>
+          {/* <div className="right-section">
+          <img
+            src="./assets/mask-group-5.svg"
+            alt="crocheting-image"
+            className="crocheting-image"
+          />
+          <img  
+            src="./assets/group-21.svg"
+            alt="dot-image"
+            className="dot-image"
+          />
+          </div> */}
+          <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
+          
+              <img
+            src="./assets/mask-group-7.svg"
+            alt="leadership-image"
+               className="crocheting-image"
+          />
+            {/* <div className="circles">
+            {images.map((_, index) => (
+              <div
+                key={index}
+                alt="dot-image"
+                className={`dot-image ${index === activeIndex ? 'active' : ''}`}
+                onClick={() => handleCircleClick(index)}
+              />
+            ))}
+            </div> */}
+          </div>
+          </div>
+        </section>
+        
+          {/* <div className="leadership-content">
             <div className="leadership-icon">
           <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
           <h3 className="leadership-section-title">Leadership</h3>
@@ -596,15 +706,15 @@ const Portfolio = () => {
             alt="leadership-image"
             className="leadership-image"
           />
-          </div>
-        </section>
+          </div> */}
+        {/* </section> */}
       
       {/* Line Divider */}
-      <img
+      {/* <img
             src="./assets/line-12.svg"
             alt="line-divider"
             className="line-divider"
-      />
+      /> */}
 
           {/* Languages Section */}
           <section className="languages">
