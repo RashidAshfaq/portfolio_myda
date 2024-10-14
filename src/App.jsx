@@ -6,23 +6,37 @@ const Portfolio = () => {
   
     const [activeIndex, setActiveIndex] = useState(0);
     const [activeVideoIndex, setActiveVideoIndex] = useState(0);
+    const [leftArrowImage, setLeftArrowImage] = useState('./assets/maki-arrow-2.svg'); // Initial left arrow image
     const [fileUrl, setFileUrl] = useState("./assets/resume.pdf");
     const [images, setImages] = useState([
       './assets/mask-group-5.svg',
       './assets/mask-group-9.svg',
       './assets/mask-group-10.svg', // add more images here
     ]);
+    const [sports_images, setSportImages] = useState([
+      './assets/sport_image_1.png',
+      './assets/sport_image_2.png',
+      './assets/sport_image_3.png', // add more images here
+    ]);
+    const [leadership_images, setLeadershipImages] = useState([
+      './assets/leadership_image.png',
+      './assets/leadership_image.svg',
+      './assets/mask-group-7.svg', // add more images here
+    ]);
     const [community_images, setCommunityImages] = useState([
-      './assets/mask-group-6.svg',
+      // './assets/mask-group-6.svg',
       './assets/mask-group-11.svg',
       './assets/mask-group-12.svg', // add more images here
+      './assets/make_community_1.svg',
+      './assets/make_community_2.svg',
+      // './assets/make_community_2.svg',
     ]);
     const [sports_videos, setSportVideo] = useState([
-      './assets/video_.mp4',
+      './assets/updated_video.mp4',
     'https://www.w3schools.com/html/mov_bbb.mp4',
     ]);
     const [music_video, setMusicVideo] = useState([
-      './assets/video_.mp4',
+      './assets/updated_video.mp4',
     ]);
     const [isPlaying, setIsPlaying] = useState(false); // State to track if the video is playing
     const [isSportPlaying, setIsSportPlaying] = useState(false); 
@@ -82,27 +96,26 @@ const Portfolio = () => {
   // State to keep track of the index for the first visible image
   const [currentStartIndex, setCurrentStartIndex] = useState(0);
 
-  // Handler for left arrow click
-  const handleLeftClick = () => {
-    if (currentStartIndex > 0) {
-      const newStartIndex = currentStartIndex - 1;
-      setCurrentStartIndex(newStartIndex);
-      setVisibleCertificates([
-        allCertificates[newStartIndex],
-        allCertificates[newStartIndex + 1],
-      ]);
-    }
-  };
-
-  // Handler for right arrow click
+  // Handle right arrow click
   const handleRightClick = () => {
     if (currentStartIndex < allCertificates.length - 2) {
       const newStartIndex = currentStartIndex + 1;
       setCurrentStartIndex(newStartIndex);
-      setVisibleCertificates([
-        allCertificates[newStartIndex],
-        allCertificates[newStartIndex + 1],
-      ]);
+      setVisibleCertificates([allCertificates[newStartIndex], allCertificates[newStartIndex + 1]]);
+      setLeftArrowImage('./assets/maki_arrow.png'); // Change left arrow image
+    }
+  };
+
+  // Handle left arrow click
+  const handleLeftClick = () => {
+    if (currentStartIndex > 0) {
+      const newStartIndex = currentStartIndex - 1;
+      setCurrentStartIndex(newStartIndex);
+      setVisibleCertificates([allCertificates[newStartIndex], allCertificates[newStartIndex + 1]]);
+    }
+
+    if (currentStartIndex === 1) {
+      setLeftArrowImage('./assets/maki-arrow-2.svg'); // Restore original left arrow image
     }
   };
   // State to toggle menu visibility
@@ -158,8 +171,8 @@ const Portfolio = () => {
               <li><Link className="link" to="resume" smooth={true} duration={500}>Resume</Link></li>
             </ul>
           </nav>
-          <img src="./assets/line-9.svg" alt="Myda" style={{margin: "30px"}} className="img-line"/>
-          <div className="social-icons">
+          {/* <img src="./assets/line-9.svg" alt="Myda" style={{margin: "30px"}} className="img-line"/> */}
+          {/* <div className="social-icons">
             <a
               href="https://www.facebook.com"
               target="_blank"
@@ -181,7 +194,7 @@ const Portfolio = () => {
             >
               <img src="./assets/group-9.svg" alt="twitter Icon" />
             </a>
-          </div>
+          </div> */}
         </div>
       </header>
 
@@ -195,8 +208,7 @@ const Portfolio = () => {
           </div>
           <div className="d-flex flex-column justify-content-start header-p-btn">
           <p className="intro-description">
-          Discover my passions for crocheting, music, community engagement, sports, leadership, and languages. Each of these experiences has shaped who I am and continues to fuel my creativity and personal growth.
-          </p>
+          I am a natural leader. I thrive in the company of friends and my family. I enjoy crocheting, music, community engagement, sports and languages. Each of these experiences has shaped who I am and continues to fuel my creativity and personal growth.          </p>
            {/* Portfolio Button with Scroll to Passion Section */}
         <Link to="passion" smooth={true} duration={500}>
           <button className="portfolio-button">My Portfolio</button>
@@ -204,7 +216,7 @@ const Portfolio = () => {
         </div>
           </div>
           <div className="intro-img col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-lg d-flex justify-content-center align-items-center ">
-          <img src="./assets/mg-1.svg" alt="Myda" className="intro-image" />
+          <img src="./assets/group_intro.svg" alt="Myda" className="intro-image" />
           </div>
           </div>
         </section>
@@ -230,12 +242,11 @@ const Portfolio = () => {
             </div>
             <div className="about-margin-lft">
           <p className="section-description">
-          I started my creative journey early, from learning crocheting during the pandemic to playing the piano and actively engaging in my community. Whether it’s through sports or volunteering, I find joy in leadership and personal growth. Every experience has given me new perspectives, and I’m excited to share them with you.
-          </p>
-          <blockquote className="quote">
+          I started my creative journey early, from learning crocheting during the pandemic to playing the piano and actively engaging in my community. Whether it's through sports or volunteering, I find joy in leadership and personal growth. Every experience has given me new perspectives, and I'm excited to learn and grow as an individual and a community member.          </p>
+          {/* <blockquote className="quote">
            Follow me on:
-          </blockquote>
-          <div className="social-icons-about">
+          </blockquote> */}
+          {/* <div className="social-icons-about">
             <a
               href="https://www.facebook.com"
               target="_blank"
@@ -257,7 +268,7 @@ const Portfolio = () => {
             >
               <img src="./assets/group-9.svg" alt="twitter Icon" />
             </a>
-          </div>
+          </div> */}
           </div>
           </div>
           </div>
@@ -339,6 +350,7 @@ const Portfolio = () => {
                   <img src='./assets/Group_28.svg' alt="Play Button" className="play-icon" />
                 </button>
             )}
+             
           </div>
 
           <div className="crocheting-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 order-first order-sm-first order-lg-last">
@@ -494,7 +506,7 @@ const Portfolio = () => {
         
        
           <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 order-last order-sm-last order-lg-first" >
-          <video
+          {/* <video
               className="sports-image"
               ref={videoRef} 
               // muted 
@@ -508,8 +520,23 @@ const Portfolio = () => {
                 <button className="play-button" onClick={handlePlayPause}>
                   <img src='./assets/Group_28.svg' alt="Play Button" className="play-icon" />
                 </button>
-            )}
+            )} */}
+            <img
+              src={sports_images[activeIndex]}
+              alt="crocheting-image"
+              className="crocheting-image"
+            />
             <div className="circles">
+            {sports_images.map((_, index) => (
+              <div
+                key={index}
+                alt="dot-image"
+                className={`dot-image ${index === activeIndex ? 'active' : ''}`}
+                onClick={() => handleCircleClick(index)}
+              />
+            ))}
+            </div>
+            {/* <div className="circles">
             {sports_videos.map((_, index) => (
               <div
                 key={index}
@@ -518,7 +545,7 @@ const Portfolio = () => {
                 onClick={() => handleCircleVideoClick(index)}
               />
             ))}
-            </div>
+            </div> */}
           </div>
 
           <div className="crocheting-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 order-first order-sm-first order-lg-last">
@@ -575,8 +602,7 @@ const Portfolio = () => {
           />Unknown
           </blockquote>
           <p className="section-description">
-          I was elected Student Representative in the spring of 7th grade. Taking the initiative, my co-rep and I planned out the last day of school events, bonding activities, food drives, and more fun things for our grade to participate in. I am able to take on a leadership position with ease and enjoy working with a team or leading projects on my own. I have attended several Model UN Leadership Conferences and camps over the past two years, have represented Turkey, Russia, Afghanistan and the Arctic Circle. I have outlined problems and proposed solutions and have won “ Best Position Paper Award” for my research on air pollution in Russia.
-          </p>
+          I was elected Student Representative in the spring of 7th grade. Taking the initiative, my co-rep and I planned out the last day of school events, bonding activities, food drives, and more fun things for our grade to participate in. I am able to take on a leadership position with ease and enjoy working with a team or leading projects on my own. I have attended several Model UN Leadership Conferences and camps over the past two years, have represented Turkey, Russia, Afghanistan and the Arctic Circle. I have outlined problems and proposed solutions and have won “ Best Position Paper Award” for my research on air pollution in Russia. Recently ( October 2024), I was elected as co-president in my school's Student Govrnment elections for 8th grade. I am humbled and excited at the same time and take my responsibilities seriously and will work with my class mates to make this a fantastic year          </p>
           </div>
           </div>
           {/* <div className="right-section">
@@ -593,11 +619,21 @@ const Portfolio = () => {
           </div> */}
           <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
           
-              <img
-            src="./assets/mask-group-7.svg"
-            alt="leadership-image"
-               className="crocheting-image"
-          />
+          <img
+              src={leadership_images[activeIndex]}
+              alt="crocheting-image"
+              className="crocheting-image"
+            />
+            <div className="circles">
+            {images.map((_, index) => (
+              <div
+                key={index}
+                alt="dot-image"
+                className={`dot-image ${index === activeIndex ? 'active' : ''}`}
+                onClick={() => handleCircleClick(index)}
+              />
+            ))}
+            </div>
             {/* <div className="circles">
             {images.map((_, index) => (
               <div
@@ -641,11 +677,11 @@ const Portfolio = () => {
         {/* </section> */}
       
       {/* Line Divider */}
-      {/* <img
+      <img
             src="./assets/line-12.svg"
             alt="line-divider"
             className="line-divider"
-      /> */}
+      />
 
           {/* Languages Section */}
 
@@ -654,7 +690,7 @@ const Portfolio = () => {
             <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 order-last order-md-last order-lg-first">
           
           <img
-          src="./assets/languages.svg"
+          src="./assets/languages.png"
             alt="languages-image"
            className="crocheting-image"
       />
@@ -738,7 +774,7 @@ const Portfolio = () => {
         {/* <h3 className="section-title">Certifications</h3> */}
         <div className="certificates-icon">
           <img src="./assets/frame-8.svg" alt="Quote" className="quote-icon" />
-          <h3 className="leadership-section-title" style={{color: "#fff"}}>Certifications</h3>
+          <h3 className="leadership-section-title" style={{color: "#fff"}}>Certificates</h3>
             </div>
        
       <div className="certificates-content">
@@ -746,26 +782,23 @@ const Portfolio = () => {
           <img key={index} src={src} alt={`Certificate ${index + 1}`} />
         ))}
       </div>
-
       {/* Arrow Controls */}
       <div className="arrows">
-      
         <img
-          src="./assets/maki-arrow-2.svg"
+          src={leftArrowImage} // Use the leftArrowImage state
           alt="Left Arrow"
           onClick={handleLeftClick}
-          className={`arrow ${currentStartIndex  === 0 ? 'disabled' : ''}`}
+          className={`arrow ${currentStartIndex === 0 ? 'disabled' : ''}`}
         />
-       
-     
         <img
           src="./assets/maki-arrow.svg"
           alt="Right Arrow"
           onClick={handleRightClick}
-          className={`arrow ${currentStartIndex  >= allCertificates.length - 2 ? 'disabled' : ''}`}
+          className={`arrow ${currentStartIndex >= allCertificates.length - 2 ? 'disabled' : ''}`}
         />
-        
       </div>
+
+
       </section>
       {/* Resume SEction */}
       <section className="resume" id="resume">
@@ -774,20 +807,29 @@ const Portfolio = () => {
         <h3 className="leadership-section-title">Resume</h3>
        </div>
        <div className="quote-button">
+        <div className="resume_dev">
        <blockquote className="resume-quote">
-       “The finest thing about a hobby is that you can’t do any pretending about it. You either like it or you don’t.”
-          </blockquote>
+       “Do the best you can until you know better. Then when you know better, do better.”
+        </blockquote>
+        <blockquote className="author-quote">
+          <img
+            src="./assets/line-10.svg"
+            alt="line"
+            className="line"
+          />Maya Angelou
+        </blockquote>
+        </div>
        <a href={fileUrl} download="My_Resume.pdf" className="resume-button">Download Resume</a>
        </div>
     </section>
       {/* navigation section  */}
       <section className="footer-navigation">
-      <div className="name-dev col-4">
+      <div className="name-dev col-12 col-sm-12 col-md-12 col-lg-4">
         <h3 className="name">
           <span className="name_span_dev">Myda</span>Gilani
         </h3>
        </div>
-       <dev className="nav-container col-8"  >
+       <dev className="nav-container col-12 col-sm-12 col-md-8 col-lg-8"  >
           <nav className="navigation">
             <ul style={{gap: 40, border: "none"}}>
             <li><Link className="link" to="home" smooth={true} duration={500}>Home</Link></li>
@@ -798,7 +840,7 @@ const Portfolio = () => {
             </ul>
           </nav>
 
-          <div className="social-icons-footer" style={{gap: 15}}>
+          {/* <div className="social-icons-footer" style={{gap: 15}}>
             <a
               href="https://www.facebook.com"
               target="_blank"
@@ -820,7 +862,7 @@ const Portfolio = () => {
             >
               <img src="./assets/group-9.svg" alt="twitter Icon" />
             </a>
-          </div>
+          </div> */}
         </dev>
     </section>
         {/* Other Sections like Crocheting, Music, etc. */}

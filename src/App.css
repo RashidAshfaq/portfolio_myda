@@ -33,7 +33,7 @@ body, html {
   }
   .nav-container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 2%;
     
@@ -818,7 +818,7 @@ height: 24px;
     margin-left: 0%;
   }
   .resume-icon{
-    margin-left: 5%;
+    margin-left: 0%;
   }
   .social-icons-footer{
     
@@ -1105,7 +1105,7 @@ height: 24px;
  }
 
  .resume-icon{
-  margin-left: 5.5%;
+  margin-left: 0%;
  }
 
  .quote-button{
@@ -1115,7 +1115,7 @@ height: 24px;
  .resume-quote{
   font-size: 25px;
 
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
  }
 
  .resume-button{
@@ -1170,13 +1170,16 @@ height: 24px;
     top: 70px;
     right: 40px;
     background-color: white;
-    width: 200px;
+    /* width: 200px; */
     /* border: 1px solid #ccc; */
     box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1);
     z-index: 999;
   }
 .nav-container{
   justify-content: center;
+}
+.name-dev{
+  width: 100%;
 }
   .navigation ul {
     flex-direction: column;
@@ -1277,6 +1280,9 @@ height: 24px;
 .section-image {
 
   width: 84%;
+}
+.navigation{
+  display: none;
 }
 }
 
@@ -1616,7 +1622,7 @@ height: 24px;
  .resume-quote{
   font-size: 25px;
 
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
  }
 
  .resume-button{
@@ -1663,7 +1669,7 @@ height: 24px;
 
   /* Hide the normal menu on small screens */
   .navigation {
-    display: none;
+    
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
@@ -1992,7 +1998,7 @@ padding-left: 34%;
 
  .resume-quote{
   font-size: 20px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
  }
 
  .resume-button{
@@ -2010,7 +2016,11 @@ padding-left: 34%;
   height: 130px;
  
  }
- .portfolio-footer, .footer-span{
+ .portfolio-footer{
+  font-size: 16px;
+  margin-left: 40px;
+ }
+ .footer-span{
   font-size: 16px;
  }
  .social-icons-footer{
