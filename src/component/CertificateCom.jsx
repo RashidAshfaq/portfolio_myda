@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import Footer from "./FooterCom";
 
 const Certificate = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -185,6 +186,7 @@ const Certificate = () => {
           />
         </div>
       </section>
+      <Footer/>
     </>
   );
 };

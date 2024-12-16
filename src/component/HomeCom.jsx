@@ -1,6 +1,7 @@
 import "../App.css";
 import  { useState, useEffect, useRef } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import Footer from "./FooterCom";
 
 const Portfolio = () => {
   
@@ -253,14 +254,9 @@ const Portfolio = () => {
 
 
       
-     
+       <Footer/>
       {/* navigation section  */}
-      <section className="footer-navigation">
-      <div className="name-dev col-12 col-sm-12 col-md-12 col-lg-4">
-        <h3 className="name">
-          <span className="name_span_dev">Myda</span>Gilani
-        </h3>
-       </div>
+      {/* <section className="footer-navigation">
        <dev className="nav-container col-12 col-sm-12 col-md-8 col-lg-8"  >
           <nav className="navigation">
             <ul style={{gap: 40, border: "none"}}>
@@ -272,38 +268,14 @@ const Portfolio = () => {
             </ul>
           </nav>
 
-          {/* <div className="social-icons-footer" style={{gap: 15}}>
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./assets/group-10.svg" alt="Facebook Icon" />
-            </a>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./assets/group-8.svg" alt="linkedin Icon" />
-            </a>
-            <a
-              href="https://www.twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img src="./assets/group-9.svg" alt="twitter Icon" />
-            </a>
-          </div> */}
+    
         </dev>
-    </section>
+    </section> */}
         {/* Other Sections like Crocheting, Music, etc. */}
         {/* Repeat similar structure as About Me for each section */}
       </main>
 
-      <footer className="portfolio-footer">
-        <p>© Myda Gilani 2024. Powered by <a className="footer-span" href="https://www.tabsgi.com/">TGI.</a></p>
-      </footer>
+     
     </div>
   );
 };
