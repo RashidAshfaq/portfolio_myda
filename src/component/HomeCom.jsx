@@ -252,58 +252,8 @@ const Portfolio = () => {
         </section>
 
 
-        <section className="certificates" id="certificates">
-        {/* <h3 className="section-title">Certifications</h3> */}
-        <div className="certificates-icon">
-          <img src="./assets/frame-8.svg" alt="Quote" className="quote-icon" />
-          <h3 className="leadership-section-title" style={{color: "#fff"}}>Certificates</h3>
-            </div>
-       
-      <div className="certificates-content">
-      {visibleCertificates.map((src, index) => (
-          <img key={index} src={src} alt={`Certificate ${index + 1}`} />
-        ))}
-      </div>
-      {/* Arrow Controls */}
-      <div className="arrows">
-        <img
-          src={leftArrowImage} // Use the leftArrowImage state
-          alt="Left Arrow"
-          onClick={handleLeftClick}
-          className={`arrow ${currentStartIndex === 0 ? 'disabled' : ''}`}
-        />
-        <img
-          src="./assets/maki-arrow.svg"
-          alt="Right Arrow"
-          onClick={handleRightClick}
-          className={`arrow ${currentStartIndex >= allCertificates.length - 2 ? 'disabled' : ''}`}
-        />
-      </div>
-
-
-      </section>
-      {/* Resume SEction */}
-      <section className="resume" id="resume">
-      <div className="resume-icon">
-        <img src="./assets/frame-4.svg" alt="Quote" className="quote-icon" />
-        <h3 className="leadership-section-title">Resume</h3>
-       </div>
-       <div className="quote-button">
-        <div className="resume_dev">
-       <blockquote className="resume-quote">
-       “Do the best you can until you know better. Then when you know better, do better.”
-        </blockquote>
-        <blockquote className="author-quote">
-          <img
-            src="./assets/line-10.svg"
-            alt="line"
-            className="line"
-          />Maya Angelou
-        </blockquote>
-        </div>
-       <a href={fileUrl} download="My_Resume.pdf" className="resume-button">Download Resume</a>
-       </div>
-    </section>
+      
+     
       {/* navigation section  */}
       <section className="footer-navigation">
       <div className="name-dev col-12 col-sm-12 col-md-12 col-lg-4">

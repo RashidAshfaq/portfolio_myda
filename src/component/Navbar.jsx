@@ -1,11 +1,13 @@
 import React from 'react';
 import  { useState, useEffect, useRef } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
      const [isOpen, setIsOpen] = useState(false);
       // Ref for the hamburger menu
       const menuRef = useRef(null);
+      const navigate = useNavigate();
     
       // Function to handle the click event on the hamburger menu
       const toggleMenu = () => {
@@ -17,7 +19,9 @@ const Navbar = () => {
           setIsOpen(false); // Close menu if clicked outside
         }
       };
-    
+      const handleNavigation = () => {
+        navigate('/specific-url'); // Replace '/specific-url' with your desired path
+      };
       useEffect(() => {
         if (isOpen) {
           // Add event listener when the menu is open
@@ -47,11 +51,11 @@ const Navbar = () => {
 
      <nav className={`navigation ${isOpen ? 'show' : ''}`}>
         <ul>
-        <li><Link className="link" to="home" smooth={true} duration={500}>Home</Link></li>
-          <li><Link className="link" to="about" smooth={true} duration={500}>About</Link></li>
-          <li><Link className="link" to="passion" smooth={true} duration={500}>Passion</Link></li>
-          <li><Link className="link" to="certificates" smooth={true} duration={500}>Certificates</Link></li>
-          <li><Link className="link" to="resume" smooth={true} duration={500}>Resume</Link></li>
+        <li><Link className="link" onClick={() => navigate('/')} smooth={true} duration={500}>Home</Link></li>
+          {/* <li><Link className="link" onClick={() => navigate('/about')} smooth={true} duration={500}>About</Link></li> */}
+          <li><Link className="link" onClick={() => navigate('/passion')} smooth={true} duration={500}>Passion</Link></li>
+          <li><Link className="link" onClick={() => navigate('/certificate')} smooth={true} duration={500}>Certificates</Link></li>
+          <li><Link className="link" onClick={() => navigate('/resume')} smooth={true} duration={500}>Resume</Link></li>
         </ul>
       </nav>
       {/* <img src="./assets/line-9.svg" alt="Myda" style={{margin: "30px"}} className="img-line"/> */}

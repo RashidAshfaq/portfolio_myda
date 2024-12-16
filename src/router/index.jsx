@@ -4,17 +4,21 @@ import Home from "../component/HomeCom";
 import Passion from "../component/PassionCom";
 import Certificates from "../component/CertificateCom";
 import Resume from "../component/ResumeCom";
+// import Navbar from "../component/Navbar";
 
 const AppRouter = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/passion" element={<Passion />} />
-        <Route path="/certificates" element={<Certificates />} />
-        <Route path="/resume" element={<Resume />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        {/* <Navbar /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/passion" element={<Passion />} />
+          <Route path="/certificate" element={<Certificates />} />
+          <Route path="/resume" element={<Resume />} />
+        </Routes>
+      </Router>
+    </>
   );
 };
 

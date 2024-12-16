@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Navbar from './components/Navbar';
+import Navbar from './component/Navbar';
 // import Footer from './components/Footer';
 import Home from './component/HomeCom';
 import Certificate from './component/CertificateCom';
@@ -11,7 +11,7 @@ import Resume from './component/ResumeCom';
 const App = () => {
   return (
     <Router>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/certificate" element={<Certificate />} />
