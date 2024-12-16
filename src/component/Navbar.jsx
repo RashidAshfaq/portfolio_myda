@@ -41,7 +41,7 @@ const Navbar = () => {
     <h1 className="name"  onClick={() => window.location.reload()}>
       <span className="name_span"  onClick={() => window.location.reload()}>Myda</span>Gilani
     </h1>
-    <div className="nav-container" ref={menuRef}>
+    <div className="nav-container" ref={menuRef}> 
    {/* Hamburger Icon for Mobile */}
    <div className="hamburger" onClick={toggleMenu}>
       <span className={`bar ${isOpen ? 'open' : ''}`}></span>
