@@ -7,7 +7,7 @@ const Portfolio = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [activeVideoIndex, setActiveVideoIndex] = useState(0);
     const [leftArrowImage, setLeftArrowImage] = useState('./assets/maki-arrow-2.svg'); // Initial left arrow image
-    const [fileUrl, setFileUrl] = useState("./assets/resume.pdf");
+    const [fileUrl, setFileUrl] = useState("./assets/myda_gelani.pdf");
     const [images, setImages] = useState([
       './assets/mask-group-5.svg',
       './assets/mask-group-9.svg',
@@ -152,7 +152,7 @@ const Portfolio = () => {
     <div className="portfolio">
       <header className="portfolio-header">
         <h1 className="name"  onClick={() => window.location.reload()}>
-          <span className="name_span"  onClick={() => window.location.reload()}>Myda</span>Gilani
+          <span className="name_span"  onClick={() => window.location.reload()}>Myda Gilani </span>
         </h1>
         <div className="nav-container" ref={menuRef}>
        {/* Hamburger Icon for Mobile */}
@@ -203,14 +203,14 @@ const Portfolio = () => {
         <div className="row ">
           <div className="intro-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-lg d-flex justify-content-center align-items-center align-items-md-start align-items-sm-start">
           <div  className="title-img">
-          <img src="./assets/ellipse-4.svg" alt="Myda" className="text-image" />
-          <h2 className="intro-title"><span  className="span">Myda</span> Gilani</h2>
+          <img src="./assets/pinki.png" alt="Myda" className="text-image" />
+          <h2 className="intro-title"><span  className="span">Myda Gilani</span></h2>
           </div>
           <div className="d-flex flex-column justify-content-start header-p-btn">
           <p className="intro-description">
           I am a natural leader. I thrive in the company of friends and my family. I enjoy crocheting, music, community engagement, sports and languages. Each of these experiences has shaped who I am and continues to fuel my creativity and personal growth.          </p>
            {/* Portfolio Button with Scroll to Passion Section */}
-        <Link to="passion" smooth={true} duration={500}>
+        <Link to="resume" smooth={true} duration={500}>
           <button className="portfolio-button">My Portfolio</button>
         </Link>
         </div>
@@ -826,7 +826,7 @@ const Portfolio = () => {
       <section className="footer-navigation">
       <div className="name-dev col-12 col-sm-12 col-md-12 col-lg-4">
         <h3 className="name">
-          <span className="name_span_dev">Myda</span>Gilani
+          <span className="name_span_dev">Myda Gilani</span>
         </h3>
        </div>
        <dev className="nav-container col-12 col-sm-12 col-md-8 col-lg-8"  >
