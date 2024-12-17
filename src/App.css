@@ -327,7 +327,7 @@ html {
 .crocheting-image {
   max-width: 700px;
   width: 90%;
-  transition: opacity 0.5s ease-in-out;
+  /* transition: opacity 0.5s ease-in-out; */
 }
 
 .circles {
@@ -740,11 +740,11 @@ html {
 }
 .portfolio-footer {
   text-align: center;
-  margin: 0;
+  margin-left: 0px !important;
   height: 40px;
   color: #777;
   margin-left: 150px;
-  font-family: 'Times New Roman', serif, sans-serif;
+  font-family: "Times New Roman", serif, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 30.6px;
@@ -1968,4 +1968,29 @@ html {
   .certificates-grid {
     grid-template-columns: 1fr; /* 1 column */
   }
+}
+/* For webkit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: white; /* Light track background for contrast */
+  border-radius: 5px; /* Rounded corners for a clean look */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f4a6a0; /* Soft pink thumb for a cohesive theme */
+  border-radius: 5px; /* Rounded edges for the thumb */
+  border: 2px solid white;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e08984; /* Slightly darker pink on hover for interactivity */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin; /* Slim scrollbar */
+  scrollbar-color: #f4a6a0 white; /* Thumb color and track color */
 }

@@ -4,6 +4,10 @@ import Footer from "./FooterCom";
 
 const Passion = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndexCommunity, setActiveIndexCommunity] = useState(0);
+  const [activeIndexLeadership, setActiveIndexLeadership] = useState(0);
+  const [activeIndexSport, setActiveIndexSport] = useState(0);
+  const [activeIndexAdditional, setActiveIndexAdditional] = useState(0);
   const [activeVideoIndex, setActiveVideoIndex] = useState(0);
   const [leftArrowImage, setLeftArrowImage] = useState(
     "./assets/maki-arrow-2.svg"
@@ -56,12 +60,28 @@ const Passion = () => {
     setIsSportPlaying(!isSportPlaying); // Toggle the playing state
   };
 
+  // useEffect(() => {
+  //   const intervalId = setInterval(() => {
+  //     setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
+  //   }, 3000); // update every 2s
+  //   return () => clearInterval(intervalId);
+  // }, [images.length, community_images.length]);
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000); // update every 2s
-    return () => clearInterval(intervalId);
-  }, [images.length, community_images.length]);
+    console.log("indexes are chaiging", activeIndexAdditional);
+    setImages[activeIndexAdditional];
+  }, [activeIndexAdditional]);
+  useEffect(() => {
+    console.log("indexes are chaiging", activeIndexCommunity);
+    setCommunityImages[activeIndexCommunity];
+  }, [activeIndexCommunity]);
+  useEffect(() => {
+    console.log("indexes are chaiging", activeIndexLeadership);
+    setLeadershipImages[activeIndexLeadership];
+  }, [activeIndexLeadership]);
+  useEffect(() => {
+    console.log("indexes are chaiging", activeIndexSport);
+    setSportImages[activeIndexSport];
+  }, [activeIndexSport]);
 
   // Create a ref for the video element
   const videoRef = useRef(null);
@@ -70,7 +90,24 @@ const Passion = () => {
     setActiveVideoIndex(index);
     videoRef.current.load(); // Reload the video when index changes
   };
+  const handleCircleClickSport = (index) => {
+    console.log("index of the image", index);
+    setActiveIndexSport(index);
+  };
+  const handleCircleClickCrocheting = (index) => {
+    console.log("index of the image", index);
+    setActiveIndexAdditional(index);
+  };
+  const handleCircleClickCommunity = (index) => {
+    console.log("index of the image", index);
+    setActiveIndexCommunity(index);
+  };
+  const handleCircleClickLeadership = (index) => {
+    console.log("index of the image", index);
+    setActiveIndexLeadership(index);
+  };
   const handleCircleClick = (index) => {
+    console.log("index of the image", index);
     setActiveIndex(index);
   };
 
@@ -192,7 +229,7 @@ const Passion = () => {
 
             <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
               <img
-                src={images[activeIndex]}
+                src={images[activeIndexAdditional]}
                 alt="crocheting-image"
                 className="crocheting-image"
               />
@@ -202,9 +239,9 @@ const Passion = () => {
                     key={index}
                     alt="dot-image"
                     className={`dot-image ${
-                      index === activeIndex ? "active" : ""
+                      index === activeIndexAdditional ? "active" : ""
                     }`}
-                    onClick={() => handleCircleClick(index)}
+                    onClick={() => handleCircleClickCrocheting(index)}
                   />
                 ))}
               </div>
@@ -342,7 +379,7 @@ const Passion = () => {
           </div> */}
             <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
               <img
-                src={community_images[activeIndex]}
+                src={community_images[activeIndexCommunity]}
                 alt="crocheting-image"
                 className="crocheting-image"
               />
@@ -352,9 +389,9 @@ const Passion = () => {
                     key={index}
                     alt="dot-image"
                     className={`dot-image ${
-                      index === activeIndex ? "active" : ""
+                      index === activeIndexCommunity ? "active" : ""
                     }`}
-                    onClick={() => handleCircleClick(index)}
+                    onClick={() => handleCircleClickCommunity(index)}
                   />
                 ))}
               </div>
@@ -440,7 +477,7 @@ const Passion = () => {
                 </button>
             )} */}
               <img
-                src={sports_images[activeIndex]}
+                src={sports_images[activeIndexSport]}
                 alt="crocheting-image"
                 className="crocheting-image"
               />
@@ -450,9 +487,9 @@ const Passion = () => {
                     key={index}
                     alt="dot-image"
                     className={`dot-image ${
-                      index === activeIndex ? "active" : ""
+                      index === activeIndexSport ? "active" : ""
                     }`}
-                    onClick={() => handleCircleClick(index)}
+                    onClick={() => handleCircleClickSport(index)}
                   />
                 ))}
               </div>
@@ -560,7 +597,7 @@ const Passion = () => {
           </div> */}
             <div className="right-section col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
               <img
-                src={leadership_images[activeIndex]}
+                src={leadership_images[activeIndexLeadership]}
                 alt="crocheting-image"
                 className="crocheting-image"
               />
@@ -570,9 +607,9 @@ const Passion = () => {
                     key={index}
                     alt="dot-image"
                     className={`dot-image ${
-                      index === activeIndex ? "active" : ""
+                      index === activeIndexLeadership ? "active" : ""
                     }`}
-                    onClick={() => handleCircleClick(index)}
+                    onClick={() => handleCircleClickLeadership(index)}
                   />
                 ))}
               </div>
