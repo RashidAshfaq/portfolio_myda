@@ -9,7 +9,7 @@ const Resume = () => {
   const [leftArrowImage, setLeftArrowImage] = useState(
     "./assets/maki-arrow-2.svg"
   ); // Initial left arrow image
-  const [fileUrl, setFileUrl] = useState("./assets/resume.pdf");
+  const [fileUrl, setFileUrl] = useState("./assets/myda_gelani.pdf");
   const [images, setImages] = useState([
     "./assets/mask-group-5.svg",
     "./assets/mask-group-9.svg",

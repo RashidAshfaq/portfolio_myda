@@ -6,7 +6,7 @@ import Resume from "../component/ResumeCom";
 const ResumePage = ({}) => {
   return (
     <div>
-      <Header title="resume" />
+      <Header title="Resume" />
       <Resume />
     </div>
   );

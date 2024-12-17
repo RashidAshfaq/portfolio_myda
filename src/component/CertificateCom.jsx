@@ -157,18 +157,23 @@ const Certificate = () => {
       <section className="certificates" id="certificates">
         {/* <h3 className="section-title">Certifications</h3> */}
         <div className="certificates-icon">
-          <img src="./assets/frame-8.svg" alt="Quote" className="quote-icon" />
-          <h3 className="leadership-section-title" style={{ color: "#fff" }}>
-            Certificates
-          </h3>
+          <img
+            src="./assets/pink-wave.png"
+            alt="Quote"
+            className="quote-icon"
+          />
+          <h3 className="leadership-section-title">Certificates</h3>
         </div>
-
-        <div className="certificates-content">
+        <div className="certificates-grid">
+          {allCertificates.map((src, index) => (
+            <img key={index} src={src} alt={`Certificate ${index + 1}`} />
+          ))}
+        </div>
+        {/* <div className="certificates-content">
           {visibleCertificates.map((src, index) => (
             <img key={index} src={src} alt={`Certificate ${index + 1}`} />
           ))}
         </div>
-        {/* Arrow Controls */}
         <div className="arrows">
           <img
             src={leftArrowImage} // Use the leftArrowImage state
@@ -184,9 +189,9 @@ const Certificate = () => {
               currentStartIndex >= allCertificates.length - 2 ? "disabled" : ""
             }`}
           />
-        </div>
+        </div> */}
       </section>
-      <Footer/>
+      <Footer />
     </>
   );
 };

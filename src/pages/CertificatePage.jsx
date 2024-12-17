@@ -6,7 +6,7 @@ import Certificate from "../component/CertificateCom";
 const CertificatePage = ({}) => {
   return (
     <div>
-      <Header title="certicate" />
+      <Header title="Certificates" />
       <Certificate />
     </div>
   );

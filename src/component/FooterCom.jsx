@@ -11,12 +11,12 @@ const Footer = () => {
         </h3>
       </div>
       <footer className="portfolio-footer">
-        <p>
+        {/* <p> */}
           © Myda Gilani 2024. Powered by{" "}
           <a className="footer-span" href="https://www.tabsgi.com/">
             TGI.
           </a>
-        </p>
+        {/* </p> */}
       </footer>
     </>
   );
