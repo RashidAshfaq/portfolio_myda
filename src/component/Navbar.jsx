@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <header className="portfolio-header">
     <h1 className="name"  onClick={() => window.location.reload()}>
-      <span className="name_span"  onClick={() => window.location.reload()}>Myda</span>Gilani
+      <span className="name_span"  onClick={() => window.location.reload()}>Myda Gilani</span>
     </h1>
     <div className="nav-container" ref={menuRef}> 
    {/* Hamburger Icon for Mobile */}

@@ -42,7 +42,7 @@ body, html {
     list-style: none;
     display: flex;
     gap: 40px;
-    font-family: Inter, sans-serif;
+    font-family: Times New Roman, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 21.78px;
@@ -199,7 +199,7 @@ height: 24px;
   
   .intro-description {
     color: #777;
-    font-family: Inter, sans-serif;
+    font-family: Times New Roman, sans-serif;
     font-size: 24px;
     font-weight: 400;
     line-height: 29.05px;
@@ -216,7 +216,7 @@ height: 24px;
     border: none;
     padding: 10px 20px;
     border-radius: 70px;
-    font-family: Inter, sans-serif;
+    font-family: Times New Roman, sans-serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 26.63px;
@@ -261,7 +261,7 @@ height: 24px;
   .section-description {
     font-size: 20px;
     font-weight: 400;
-    font-family: Inter, sans-serif;
+    font-family: Times New Roman, sans-serif;
     color: #777;
    
    width: 90%;
@@ -711,7 +711,7 @@ height: 24px;
     border: none;
     padding: 10px 20px;
     border-radius: 70px;
-    font-family: Inter, sans-serif;
+    font-family: Times New Roman, sans-serif;
     font-size: 22px;
     font-weight: 600;
     line-height: 26.63px;
@@ -761,7 +761,7 @@ height: 24px;
   .footer-span{
     text-decoration: underline;
     cursor: pointer;
-    font-family: Inter, sans-serif;
+    font-family: Times New Roman, sans-serif;
     font-size: 18px;
     font-weight: 400;
     line-height: 30.6px;

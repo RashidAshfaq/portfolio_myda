@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './component/Navbar';
 // import Footer from './components/Footer';
-import Home from './component/HomeCom';
-import Certificate from './component/CertificateCom';
-import Passion from './component/PassionCom';
-import Resume from './component/ResumeCom';
+import Home from './pages/HomePage';
+import Certificate from './pages/CertificatePage';
+import Passion from './pages/PassionPage';
+import Resume from './pages/ResumePage';
 // import Services from './pages/Services';
 
 const App = () => {

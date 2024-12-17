@@ -180,8 +180,8 @@ const Portfolio = () => {
         <div className="row ">
           <div className="intro-content col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-lg d-flex justify-content-center align-items-center align-items-md-start align-items-sm-start">
           <div  className="title-img">
-          <img src="./assets/ellipse-4.svg" alt="Myda" className="text-image" />
-          <h2 className="intro-title"><span  className="span">Myda</span> Gilani</h2>
+          <img src="./assets/pinki.png" alt="Myda" className="text-image" />
+          <h2 className="intro-title"><span  className="span">Myda Gilani</span></h2>
           </div>
           <div className="d-flex flex-column justify-content-start header-p-btn">
           <p className="intro-description">
